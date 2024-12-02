@@ -1,17 +1,24 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(16, 83, 88);
+video {
+  position: fixed; /* Ensures the video stays fixed as the background */
+  top: 0;
+  left: 0;
+  width: 100%; /* Covers the full width */
+  height: 100%; /* Covers the full height */
+  object-fit: cover; /* Ensures the video scales correctly to cover the screen */
+  z-index: -1; /* Places the video behind all other content */
 }
 
-.city-not-found,
-.loading-message,
-.error-message{
-  margin-top: 10px;
-  font-size: 25px;
-  text-align: center;
-  font-weight: 400;
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevents scrolling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(16, 83, 88);
+}
+
+.container {
+  position: relative;
+  z-index: 1; /* Ensures the content appears above the video */
 }
