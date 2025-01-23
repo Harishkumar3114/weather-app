@@ -40,38 +40,38 @@ const Weather = ({ icon, country, city, latitude, longitude, degree }) => {
         <Typography>{country}</Typography>
       </Stack>
       <Typography
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-around',
-          paddingLeft: '25%',
-          paddingRight: '25%',
-          paddingTop: '5%',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            fontWeight: '500',
-          }}
-        >
-          <div>Latitude</div>
-          <div>{latitude}</div>
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            fontWeight: '500',
-          }}
-        >
-          <div>Longitude</div>
-          <div>{longitude}</div>
-        </div>
-      </Typography>
+  sx={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    gap: '20px', // Add gap to create space
+    paddingTop: '5%',
+  }}
+>
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      fontWeight: '500',
+    }}
+  >
+    <div>Latitude</div>
+    <div>{latitude}</div>
+  </div>
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      fontWeight: '500',
+    }}
+  >
+    <div>Longitude</div>
+    <div>{longitude}</div>
+  </div>
+</Typography>
+
     </>
   );
 };
